@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.shashi.shiva.bankregistrationflow.innoventes.viewmodel.MainActivityViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.MainActivity">
+
+        <TextView
+            android:id="@+id/text_view_s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_32"
+            android:layout_marginLeft="@dimen/margin_32"
+            android:layout_marginTop="@dimen/margin_32"
+            android:text="@string/s"
+            android:textColor="@color/red"
+            android:textSize="@dimen/margin_42"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_32"
+            android:layout_marginLeft="@dimen/margin_32"
+            android:layout_marginTop="@dimen/margin_32"
+            android:layout_marginEnd="@dimen/margin_32"
+            android:layout_marginRight="@dimen/margin_32"
+            android:lines="2"
+            android:text="@string/first_of_the"
+            android:textColor="@color/black"
+            android:textSize="@dimen/margin_20"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_s" />
+
+        <TextView
+            android:id="@+id/text_view_pan_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_32"
+            android:layout_marginLeft="@dimen/margin_32"
+            android:layout_marginTop="@dimen/margin_42"
+            android:layout_marginEnd="@dimen/margin_32"
+            android:layout_marginRight="@dimen/margin_32"
+            android:text="@string/pan_number"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_headline" />
+
+        <EditText
+            android:id="@+id/edit_text_pan_number"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/margin_32"
+            android:layout_marginRight="@dimen/margin_32"
+            android:background="@drawable/rounded_edittext"
+            android:inputType="textCapCharacters"
+            android:paddingStart="@dimen/margin_6"
+            android:paddingEnd="@dimen/margin_6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_pan_number" />
+
+        <TextView
+            android:id="@+id/text_view_dob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_32"
+            android:layout_marginLeft="@dimen/margin_32"
+            android:layout_marginTop="@dimen/margin_32"
+            android:layout_marginEnd="@dimen/margin_32"
+            android:layout_marginRight="@dimen/margin_32"
+            android:text="@string/birthdate"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_pan_number" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout_dob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_32"
+            android:layout_marginRight="@dimen/margin_32"
+            android:clickable="true"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_dob">
+
+            <EditText
+                android:id="@+id/edit_text_date"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_edittext"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/edit_text_month"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="@dimen/margin_16"
+                android:layout_marginRight="@dimen/margin_16"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_edittext"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/edit_text_year"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="2"
+                android:background="@drawable/rounded_edittext"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_view_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_32"
+            android:layout_marginLeft="@dimen/margin_32"
+            android:layout_marginEnd="@dimen/margin_32"
+            android:layout_marginRight="@dimen/margin_32"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:autoLink="web"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/button_next"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <!--    app:backGrnd="@{viewmodel.checkAllFields}"    -->
+        <!--    android:onClick="@{(v) -> viewmodel.nextButtonClicked()}"    -->
+        <Button
+            android:id="@+id/button_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_32"
+            android:layout_marginRight="@dimen/margin_32"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:background="@drawable/button_disable"
+            android:clickable="false"
+            android:text="@string/next"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/text_view_dont_pan"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <!--    app:onClick="@{() -> viewmodel.dontHavePan()}"   -->
+        <!--    android:onClick="@{(view) -> viewmodel.dontHavePan()}"    -->
+        <!--    android:onClick="@{(v)->((Activity)(((ViewDataBinding)DataBindingUtil.findBinding(v)).lifecycleOwner)).finish()}"    -->
+        <!--    https://stackoverflow.com/a/65072329/2795035    -->
+        <TextView
+            android:id="@+id/text_view_dont_pan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_32"
+            android:text="@string/dont_have_pan"
+            android:textColor="@color/purple_500"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

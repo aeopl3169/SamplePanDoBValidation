@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BankRegInnoventes</string>
+    <string name="s">S.</string>
+    <string name="first_of_the">First of the few steps set  \n\you up with a Bank Account</string>
+    <string name="pan_number">PAN NUMBER</string>
+    <string name="birthdate">birthdate</string>
+    <!--<string name="description">Providing PAN &amp; Date of Birth helps us find and \n\fetch your KYC from a central registry by the \n\Government of India.
+        <a href="http://www.google.com">Learn more</a>
+    </string>-->
+
+    <string name="description">Providing PAN &amp; Date of Birth helps us find and \n\fetch your KYC from a central registry by the \n\Government of India. Learn more</string>
+
+    <string name="next">next</string>
+    <string name="dont_have_pan">I don\'t have a PAN</string>
+</resources>
